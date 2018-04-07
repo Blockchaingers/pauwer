@@ -1,0 +1,1985 @@
+{
+  "contractName": "Recorder",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "userId",
+          "type": "uint256"
+        },
+        {
+          "name": "machineId",
+          "type": "uint256"
+        },
+        {
+          "name": "wattHour",
+          "type": "uint256"
+        }
+      ],
+      "name": "createRecord",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "records",
+      "outputs": [
+        {
+          "name": "userId",
+          "type": "uint256"
+        },
+        {
+          "name": "machineId",
+          "type": "uint256"
+        },
+        {
+          "name": "wattHour",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getRecords",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6104ca8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312ed53101461005c57806334461067146100a55780638eff3c29146100ea575b600080fd5b341561006757600080fd5b61008f60048080359060200190919080359060200190919080359060200190919050506101e4565b6040518082815260200191505060405180910390f35b34156100b057600080fd5b6100c6600480803590602001909190505061025d565b60405180848152602001838152602001828152602001935050505060405180910390f35b34156100f557600080fd5b6100fd610296565b60405180806020018060200180602001848103845287818151815260200191508051906020019060200280838360005b8381101561014857808201518184015260208101905061012d565b50505050905001848103835286818151815260200191508051906020019060200280838360005b8381101561018a57808201518184015260208101905061016f565b50505050905001848103825285818151815260200191508051906020019060200280838360005b838110156101cc5780820151818401526020810190506101b1565b50505050905001965050505050505060405180910390f35b600080848160000181905550838160010181905550828160020181905550600080548060010182816102169190610421565b916000526020600020906003020160008390919091506000820154816000015560018201548160010155600282015481600201555050506000805490509150509392505050565b60008181548110151561026c57fe5b90600052602060002090600302016000915090508060000154908060010154908060020154905083565b61029e610453565b6102a6610453565b6102ae610453565b6102b6610453565b6102be610453565b6102c6610453565b600080805490506040518059106102da5750595b908082528060200260200182016040525093506000805490506040518059106103005750595b908082528060200260200182016040525092506000805490506040518059106103265750595b90808252806020026020018201604052509150600090505b60008054905081101561040f5760008181548110151561035a57fe5b906000526020600020906003020160000154848281518110151561037a57fe5b906020019060200201818152505060008181548110151561039757fe5b90600052602060002090600302016001015483828151811015156103b757fe5b90602001906020020181815250506000818154811015156103d457fe5b90600052602060002090600302016002015482828151811015156103f457fe5b9060200190602002018181525050808060010191505061033e565b83838396509650965050505050909192565b81548183558181151161044e5760030281600302836000526020600020918201910161044d9190610467565b5b505050565b602060405190810160405280600081525090565b61049b91905b8082111561049757600080820160009055600182016000905560028201600090555060030161046d565b5090565b905600a165627a7a72305820ec77faf7d6eae300921021fefe679900ba8b09df75d8a2385b97cfdd8d0644350029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312ed53101461005c57806334461067146100a55780638eff3c29146100ea575b600080fd5b341561006757600080fd5b61008f60048080359060200190919080359060200190919080359060200190919050506101e4565b6040518082815260200191505060405180910390f35b34156100b057600080fd5b6100c6600480803590602001909190505061025d565b60405180848152602001838152602001828152602001935050505060405180910390f35b34156100f557600080fd5b6100fd610296565b60405180806020018060200180602001848103845287818151815260200191508051906020019060200280838360005b8381101561014857808201518184015260208101905061012d565b50505050905001848103835286818151815260200191508051906020019060200280838360005b8381101561018a57808201518184015260208101905061016f565b50505050905001848103825285818151815260200191508051906020019060200280838360005b838110156101cc5780820151818401526020810190506101b1565b50505050905001965050505050505060405180910390f35b600080848160000181905550838160010181905550828160020181905550600080548060010182816102169190610421565b916000526020600020906003020160008390919091506000820154816000015560018201548160010155600282015481600201555050506000805490509150509392505050565b60008181548110151561026c57fe5b90600052602060002090600302016000915090508060000154908060010154908060020154905083565b61029e610453565b6102a6610453565b6102ae610453565b6102b6610453565b6102be610453565b6102c6610453565b600080805490506040518059106102da5750595b908082528060200260200182016040525093506000805490506040518059106103005750595b908082528060200260200182016040525092506000805490506040518059106103265750595b90808252806020026020018201604052509150600090505b60008054905081101561040f5760008181548110151561035a57fe5b906000526020600020906003020160000154848281518110151561037a57fe5b906020019060200201818152505060008181548110151561039757fe5b90600052602060002090600302016001015483828151811015156103b757fe5b90602001906020020181815250506000818154811015156103d457fe5b90600052602060002090600302016002015482828151811015156103f457fe5b9060200190602002018181525050808060010191505061033e565b83838396509650965050505050909192565b81548183558181151161044e5760030281600302836000526020600020918201910161044d9190610467565b5b505050565b602060405190810160405280600081525090565b61049b91905b8082111561049757600080820160009055600182016000905560028201600090555060030161046d565b5090565b905600a165627a7a72305820ec77faf7d6eae300921021fefe679900ba8b09df75d8a2385b97cfdd8d0644350029",
+  "sourceMap": "143:937:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "143:937:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;326:299;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;291:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;629:449;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;326:299:0;407:4;421:30;478:6;459:9;:16;;:25;;;;514:9;492;:19;;:31;;;;552:8;531:9;:18;;:29;;;;568:7;:23;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;581:9;568:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;606:7;:14;;;;599:21;;326:299;;;;;;:::o;291:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;629:449::-;667:6;;:::i;:::-;674;;:::i;:::-;681;;:::i;:::-;695:20;;:::i;:::-;750:23;;:::i;:::-;808:22;;:::i;:::-;871:6;729:7;:14;;;;718:26;;;;;;;;;;;;;;;;;;;;;;;;695:49;;787:7;:14;;;;776:26;;;;;;;;;;;;;;;;;;;;;;;;750:52;;844:7;:14;;;;833:26;;;;;;;;;;;;;;;;;;;;;;;;808:51;;880:1;871:10;;866:169;887:7;:14;;;;883:1;:18;866:169;;;927:7;935:1;927:10;;;;;;;;;;;;;;;;;;;;:17;;;915:6;922:1;915:9;;;;;;;;;;;;;;;;;:29;;;;;967:7;975:1;967:10;;;;;;;;;;;;;;;;;;;;:20;;;952:9;962:1;952:12;;;;;;;;;;;;;;;;;:35;;;;;1009:7;1017:1;1009:10;;;;;;;;;;;;;;;;;;;;:19;;;995:8;1004:1;995:11;;;;;;;;;;;;;;;;;:33;;;;;903:3;;;;;;;866:169;;;1047:6;1054:9;1064:8;1040:33;;;;;;629:449;;;;;;;:::o;143:937::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n/**\n * @title Recorder — record a message into the blockchain\n * @author Life on Mars — https://lifeonmars.pt\n */\ncontract Recorder{\n\n  //only the machine should put records\n  struct EnergyRecord {\n    uint userId;\n    uint machineId;\n    uint wattHour;\n  }\n\n\n  EnergyRecord[] public records;\n\n\n  function createRecord(uint userId,uint machineId, uint wattHour) public returns (uint) {\n      EnergyRecord storage newRecord;\n      newRecord.userId = userId;\n      newRecord.machineId = machineId;\n      newRecord.wattHour = wattHour;\n      records.push(newRecord);\n      return records.length;\n  }\n\n  function getRecords() public returns (uint[],uint[],uint[]){\n\n    uint[] memory userId = new uint[](records.length);\n    uint[] memory machineId = new uint[](records.length);\n    uint[] memory wattHour = new uint[](records.length);\n\n    for (uint i = 0; i < records.length; i++){\n      userId[i] = records[i].userId;\n      machineId[i] = records[i].machineId;\n      wattHour[i] = records[i].wattHour;\n    }\n    return(userId,machineId,wattHour);\n  }\n}",
+  "sourcePath": "/Users/jorishoogeboom/Pau/hackathon/pauwer/Solidity/contracts/Recorder.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/jorishoogeboom/Pau/hackathon/pauwer/Solidity/contracts/Recorder.sol",
+      "exportedSymbols": {
+        "Recorder": [
+          145
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "@title Recorder — record a message into the blockchain\n@author Life on Mars — https://lifeonmars.pt",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            145
+          ],
+          "name": "Recorder",
+          "scope": 146
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Recorder.EnergyRecord",
+              "name": "EnergyRecord",
+              "scope": 145,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "userId",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "231:4:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "231:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "machineId",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "248:4:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "248:14:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "wattHour",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "268:4:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "268:13:0"
+              }
+            ],
+            "id": 8,
+            "name": "StructDefinition",
+            "src": "205:81:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "records",
+              "scope": 145,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct Recorder.EnergyRecord storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "EnergyRecord",
+                      "referencedDeclaration": 8,
+                      "type": "struct Recorder.EnergyRecord storage pointer"
+                    },
+                    "id": 9,
+                    "name": "UserDefinedTypeName",
+                    "src": "291:12:0"
+                  }
+                ],
+                "id": 10,
+                "name": "ArrayTypeName",
+                "src": "291:14:0"
+              }
+            ],
+            "id": 11,
+            "name": "VariableDeclaration",
+            "src": "291:29:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "createRecord",
+              "payable": false,
+              "scope": 145,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "userId",
+                      "scope": 53,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 12,
+                        "name": "ElementaryTypeName",
+                        "src": "348:4:0"
+                      }
+                    ],
+                    "id": 13,
+                    "name": "VariableDeclaration",
+                    "src": "348:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "machineId",
+                      "scope": 53,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 14,
+                        "name": "ElementaryTypeName",
+                        "src": "360:4:0"
+                      }
+                    ],
+                    "id": 15,
+                    "name": "VariableDeclaration",
+                    "src": "360:14:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "wattHour",
+                      "scope": 53,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 16,
+                        "name": "ElementaryTypeName",
+                        "src": "376:4:0"
+                      }
+                    ],
+                    "id": 17,
+                    "name": "VariableDeclaration",
+                    "src": "376:13:0"
+                  }
+                ],
+                "id": 18,
+                "name": "ParameterList",
+                "src": "347:43:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 53,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 19,
+                        "name": "ElementaryTypeName",
+                        "src": "407:4:0"
+                      }
+                    ],
+                    "id": 20,
+                    "name": "VariableDeclaration",
+                    "src": "407:4:0"
+                  }
+                ],
+                "id": 21,
+                "name": "ParameterList",
+                "src": "406:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newRecord",
+                          "scope": 53,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct Recorder.EnergyRecord storage pointer",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "EnergyRecord",
+                              "referencedDeclaration": 8,
+                              "type": "struct Recorder.EnergyRecord storage pointer"
+                            },
+                            "id": 22,
+                            "name": "UserDefinedTypeName",
+                            "src": "421:12:0"
+                          }
+                        ],
+                        "id": 23,
+                        "name": "VariableDeclaration",
+                        "src": "421:30:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclarationStatement",
+                    "src": "421:30:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "userId",
+                              "referencedDeclaration": 3,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 23,
+                                  "type": "struct Recorder.EnergyRecord storage pointer",
+                                  "value": "newRecord"
+                                },
+                                "id": 25,
+                                "name": "Identifier",
+                                "src": "459:9:0"
+                              }
+                            ],
+                            "id": 27,
+                            "name": "MemberAccess",
+                            "src": "459:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "uint256",
+                              "value": "userId"
+                            },
+                            "id": 28,
+                            "name": "Identifier",
+                            "src": "478:6:0"
+                          }
+                        ],
+                        "id": 29,
+                        "name": "Assignment",
+                        "src": "459:25:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "ExpressionStatement",
+                    "src": "459:25:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "machineId",
+                              "referencedDeclaration": 5,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 23,
+                                  "type": "struct Recorder.EnergyRecord storage pointer",
+                                  "value": "newRecord"
+                                },
+                                "id": 31,
+                                "name": "Identifier",
+                                "src": "492:9:0"
+                              }
+                            ],
+                            "id": 33,
+                            "name": "MemberAccess",
+                            "src": "492:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 15,
+                              "type": "uint256",
+                              "value": "machineId"
+                            },
+                            "id": 34,
+                            "name": "Identifier",
+                            "src": "514:9:0"
+                          }
+                        ],
+                        "id": 35,
+                        "name": "Assignment",
+                        "src": "492:31:0"
+                      }
+                    ],
+                    "id": 36,
+                    "name": "ExpressionStatement",
+                    "src": "492:31:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "wattHour",
+                              "referencedDeclaration": 7,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 23,
+                                  "type": "struct Recorder.EnergyRecord storage pointer",
+                                  "value": "newRecord"
+                                },
+                                "id": 37,
+                                "name": "Identifier",
+                                "src": "531:9:0"
+                              }
+                            ],
+                            "id": 39,
+                            "name": "MemberAccess",
+                            "src": "531:18:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 17,
+                              "type": "uint256",
+                              "value": "wattHour"
+                            },
+                            "id": 40,
+                            "name": "Identifier",
+                            "src": "552:8:0"
+                          }
+                        ],
+                        "id": 41,
+                        "name": "Assignment",
+                        "src": "531:29:0"
+                      }
+                    ],
+                    "id": 42,
+                    "name": "ExpressionStatement",
+                    "src": "531:29:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_EnergyRecord_$8_storage_ptr",
+                                  "typeString": "struct Recorder.EnergyRecord storage pointer"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct Recorder.EnergyRecord storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11,
+                                  "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                  "value": "records"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "568:7:0"
+                              }
+                            ],
+                            "id": 45,
+                            "name": "MemberAccess",
+                            "src": "568:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 23,
+                              "type": "struct Recorder.EnergyRecord storage pointer",
+                              "value": "newRecord"
+                            },
+                            "id": 46,
+                            "name": "Identifier",
+                            "src": "581:9:0"
+                          }
+                        ],
+                        "id": 47,
+                        "name": "FunctionCall",
+                        "src": "568:23:0"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "ExpressionStatement",
+                    "src": "568:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 21
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "length",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 11,
+                              "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                              "value": "records"
+                            },
+                            "id": 49,
+                            "name": "Identifier",
+                            "src": "606:7:0"
+                          }
+                        ],
+                        "id": 50,
+                        "name": "MemberAccess",
+                        "src": "606:14:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "Return",
+                    "src": "599:21:0"
+                  }
+                ],
+                "id": 52,
+                "name": "Block",
+                "src": "413:212:0"
+              }
+            ],
+            "id": 53,
+            "name": "FunctionDefinition",
+            "src": "326:299:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getRecords",
+              "payable": false,
+              "scope": 145,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 54,
+                "name": "ParameterList",
+                "src": "648:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 144,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 55,
+                            "name": "ElementaryTypeName",
+                            "src": "667:4:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "ArrayTypeName",
+                        "src": "667:6:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclaration",
+                    "src": "667:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 144,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 58,
+                            "name": "ElementaryTypeName",
+                            "src": "674:4:0"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "ArrayTypeName",
+                        "src": "674:6:0"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "VariableDeclaration",
+                    "src": "674:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 144,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 61,
+                            "name": "ElementaryTypeName",
+                            "src": "681:4:0"
+                          }
+                        ],
+                        "id": 62,
+                        "name": "ArrayTypeName",
+                        "src": "681:6:0"
+                      }
+                    ],
+                    "id": 63,
+                    "name": "VariableDeclaration",
+                    "src": "681:6:0"
+                  }
+                ],
+                "id": 64,
+                "name": "ParameterList",
+                "src": "666:22:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        68
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "userId",
+                          "scope": 144,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "uint256[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "uint256[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 66,
+                                "name": "ElementaryTypeName",
+                                "src": "695:4:0"
+                              }
+                            ],
+                            "id": 67,
+                            "name": "ArrayTypeName",
+                            "src": "695:6:0"
+                          }
+                        ],
+                        "id": 68,
+                        "name": "VariableDeclaration",
+                        "src": "695:20:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (uint256[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "uint256[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint",
+                                      "type": "uint256"
+                                    },
+                                    "id": 69,
+                                    "name": "ElementaryTypeName",
+                                    "src": "722:4:0"
+                                  }
+                                ],
+                                "id": 70,
+                                "name": "ArrayTypeName",
+                                "src": "722:6:0"
+                              }
+                            ],
+                            "id": 71,
+                            "name": "NewExpression",
+                            "src": "718:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11,
+                                  "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                  "value": "records"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "729:7:0"
+                              }
+                            ],
+                            "id": 73,
+                            "name": "MemberAccess",
+                            "src": "729:14:0"
+                          }
+                        ],
+                        "id": 74,
+                        "name": "FunctionCall",
+                        "src": "718:26:0"
+                      }
+                    ],
+                    "id": 75,
+                    "name": "VariableDeclarationStatement",
+                    "src": "695:49:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        79
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "machineId",
+                          "scope": 144,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "uint256[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "uint256[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 77,
+                                "name": "ElementaryTypeName",
+                                "src": "750:4:0"
+                              }
+                            ],
+                            "id": 78,
+                            "name": "ArrayTypeName",
+                            "src": "750:6:0"
+                          }
+                        ],
+                        "id": 79,
+                        "name": "VariableDeclaration",
+                        "src": "750:23:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (uint256[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "uint256[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint",
+                                      "type": "uint256"
+                                    },
+                                    "id": 80,
+                                    "name": "ElementaryTypeName",
+                                    "src": "780:4:0"
+                                  }
+                                ],
+                                "id": 81,
+                                "name": "ArrayTypeName",
+                                "src": "780:6:0"
+                              }
+                            ],
+                            "id": 82,
+                            "name": "NewExpression",
+                            "src": "776:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11,
+                                  "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                  "value": "records"
+                                },
+                                "id": 83,
+                                "name": "Identifier",
+                                "src": "787:7:0"
+                              }
+                            ],
+                            "id": 84,
+                            "name": "MemberAccess",
+                            "src": "787:14:0"
+                          }
+                        ],
+                        "id": 85,
+                        "name": "FunctionCall",
+                        "src": "776:26:0"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "VariableDeclarationStatement",
+                    "src": "750:52:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        90
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "wattHour",
+                          "scope": 144,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "uint256[] memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "length": null,
+                              "type": "uint256[] storage pointer"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 88,
+                                "name": "ElementaryTypeName",
+                                "src": "808:4:0"
+                              }
+                            ],
+                            "id": 89,
+                            "name": "ArrayTypeName",
+                            "src": "808:6:0"
+                          }
+                        ],
+                        "id": 90,
+                        "name": "VariableDeclaration",
+                        "src": "808:22:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "function (uint256) pure returns (uint256[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "length": null,
+                                  "type": "uint256[] storage pointer"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint",
+                                      "type": "uint256"
+                                    },
+                                    "id": 91,
+                                    "name": "ElementaryTypeName",
+                                    "src": "837:4:0"
+                                  }
+                                ],
+                                "id": 92,
+                                "name": "ArrayTypeName",
+                                "src": "837:6:0"
+                              }
+                            ],
+                            "id": 93,
+                            "name": "NewExpression",
+                            "src": "833:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11,
+                                  "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                  "value": "records"
+                                },
+                                "id": 94,
+                                "name": "Identifier",
+                                "src": "844:7:0"
+                              }
+                            ],
+                            "id": 95,
+                            "name": "MemberAccess",
+                            "src": "844:14:0"
+                          }
+                        ],
+                        "id": 96,
+                        "name": "FunctionCall",
+                        "src": "833:26:0"
+                      }
+                    ],
+                    "id": 97,
+                    "name": "VariableDeclarationStatement",
+                    "src": "808:51:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "assignments": [
+                            99
+                          ]
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "constant": false,
+                              "name": "i",
+                              "scope": 144,
+                              "stateVariable": false,
+                              "storageLocation": "default",
+                              "type": "uint256",
+                              "value": null,
+                              "visibility": "internal"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "name": "uint",
+                                  "type": "uint256"
+                                },
+                                "id": 98,
+                                "name": "ElementaryTypeName",
+                                "src": "871:4:0"
+                              }
+                            ],
+                            "id": 99,
+                            "name": "VariableDeclaration",
+                            "src": "871:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 100,
+                            "name": "Literal",
+                            "src": "880:1:0"
+                          }
+                        ],
+                        "id": 101,
+                        "name": "VariableDeclarationStatement",
+                        "src": "871:10:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 99,
+                              "type": "uint256",
+                              "value": "i"
+                            },
+                            "id": 102,
+                            "name": "Identifier",
+                            "src": "883:1:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 11,
+                                  "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                  "value": "records"
+                                },
+                                "id": 103,
+                                "name": "Identifier",
+                                "src": "887:7:0"
+                              }
+                            ],
+                            "id": 104,
+                            "name": "MemberAccess",
+                            "src": "887:14:0"
+                          }
+                        ],
+                        "id": 105,
+                        "name": "BinaryOperation",
+                        "src": "883:18:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "uint256",
+                                  "value": "i"
+                                },
+                                "id": 106,
+                                "name": "Identifier",
+                                "src": "903:1:0"
+                              }
+                            ],
+                            "id": 107,
+                            "name": "UnaryOperation",
+                            "src": "903:3:0"
+                          }
+                        ],
+                        "id": 108,
+                        "name": "ExpressionStatement",
+                        "src": "903:3:0"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 68,
+                                          "type": "uint256[] memory",
+                                          "value": "userId"
+                                        },
+                                        "id": 109,
+                                        "name": "Identifier",
+                                        "src": "915:6:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 99,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 110,
+                                        "name": "Identifier",
+                                        "src": "922:1:0"
+                                      }
+                                    ],
+                                    "id": 111,
+                                    "name": "IndexAccess",
+                                    "src": "915:9:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "userId",
+                                      "referencedDeclaration": 3,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct Recorder.EnergyRecord storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 11,
+                                              "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                              "value": "records"
+                                            },
+                                            "id": 112,
+                                            "name": "Identifier",
+                                            "src": "927:7:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 99,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 113,
+                                            "name": "Identifier",
+                                            "src": "935:1:0"
+                                          }
+                                        ],
+                                        "id": 114,
+                                        "name": "IndexAccess",
+                                        "src": "927:10:0"
+                                      }
+                                    ],
+                                    "id": 115,
+                                    "name": "MemberAccess",
+                                    "src": "927:17:0"
+                                  }
+                                ],
+                                "id": 116,
+                                "name": "Assignment",
+                                "src": "915:29:0"
+                              }
+                            ],
+                            "id": 117,
+                            "name": "ExpressionStatement",
+                            "src": "915:29:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 79,
+                                          "type": "uint256[] memory",
+                                          "value": "machineId"
+                                        },
+                                        "id": 118,
+                                        "name": "Identifier",
+                                        "src": "952:9:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 99,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 119,
+                                        "name": "Identifier",
+                                        "src": "962:1:0"
+                                      }
+                                    ],
+                                    "id": 120,
+                                    "name": "IndexAccess",
+                                    "src": "952:12:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "machineId",
+                                      "referencedDeclaration": 5,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct Recorder.EnergyRecord storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 11,
+                                              "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                              "value": "records"
+                                            },
+                                            "id": 121,
+                                            "name": "Identifier",
+                                            "src": "967:7:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 99,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 122,
+                                            "name": "Identifier",
+                                            "src": "975:1:0"
+                                          }
+                                        ],
+                                        "id": 123,
+                                        "name": "IndexAccess",
+                                        "src": "967:10:0"
+                                      }
+                                    ],
+                                    "id": 124,
+                                    "name": "MemberAccess",
+                                    "src": "967:20:0"
+                                  }
+                                ],
+                                "id": 125,
+                                "name": "Assignment",
+                                "src": "952:35:0"
+                              }
+                            ],
+                            "id": 126,
+                            "name": "ExpressionStatement",
+                            "src": "952:35:0"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 90,
+                                          "type": "uint256[] memory",
+                                          "value": "wattHour"
+                                        },
+                                        "id": 127,
+                                        "name": "Identifier",
+                                        "src": "995:8:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 99,
+                                          "type": "uint256",
+                                          "value": "i"
+                                        },
+                                        "id": 128,
+                                        "name": "Identifier",
+                                        "src": "1004:1:0"
+                                      }
+                                    ],
+                                    "id": 129,
+                                    "name": "IndexAccess",
+                                    "src": "995:11:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "wattHour",
+                                      "referencedDeclaration": 7,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct Recorder.EnergyRecord storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 11,
+                                              "type": "struct Recorder.EnergyRecord storage ref[] storage ref",
+                                              "value": "records"
+                                            },
+                                            "id": 130,
+                                            "name": "Identifier",
+                                            "src": "1009:7:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 99,
+                                              "type": "uint256",
+                                              "value": "i"
+                                            },
+                                            "id": 131,
+                                            "name": "Identifier",
+                                            "src": "1017:1:0"
+                                          }
+                                        ],
+                                        "id": 132,
+                                        "name": "IndexAccess",
+                                        "src": "1009:10:0"
+                                      }
+                                    ],
+                                    "id": 133,
+                                    "name": "MemberAccess",
+                                    "src": "1009:19:0"
+                                  }
+                                ],
+                                "id": 134,
+                                "name": "Assignment",
+                                "src": "995:33:0"
+                              }
+                            ],
+                            "id": 135,
+                            "name": "ExpressionStatement",
+                            "src": "995:33:0"
+                          }
+                        ],
+                        "id": 136,
+                        "name": "Block",
+                        "src": "907:128:0"
+                      }
+                    ],
+                    "id": 137,
+                    "name": "ForStatement",
+                    "src": "866:169:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 64
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(uint256[] memory,uint256[] memory,uint256[] memory)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 68,
+                              "type": "uint256[] memory",
+                              "value": "userId"
+                            },
+                            "id": 138,
+                            "name": "Identifier",
+                            "src": "1047:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 79,
+                              "type": "uint256[] memory",
+                              "value": "machineId"
+                            },
+                            "id": 139,
+                            "name": "Identifier",
+                            "src": "1054:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 90,
+                              "type": "uint256[] memory",
+                              "value": "wattHour"
+                            },
+                            "id": 140,
+                            "name": "Identifier",
+                            "src": "1064:8:0"
+                          }
+                        ],
+                        "id": 141,
+                        "name": "TupleExpression",
+                        "src": "1046:27:0"
+                      }
+                    ],
+                    "id": 142,
+                    "name": "Return",
+                    "src": "1040:33:0"
+                  }
+                ],
+                "id": 143,
+                "name": "Block",
+                "src": "688:390:0"
+              }
+            ],
+            "id": 144,
+            "name": "FunctionDefinition",
+            "src": "629:449:0"
+          }
+        ],
+        "id": 145,
+        "name": "ContractDefinition",
+        "src": "143:937:0"
+      }
+    ],
+    "id": 146,
+    "name": "SourceUnit",
+    "src": "0:1080:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf491289b5da695d7892b4960dcf48eb7e1acb6b8"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-04-07T14:33:13.579Z"
+}
