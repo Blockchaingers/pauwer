@@ -10,13 +10,6 @@ async function getMachineId() {
 
 const uniqueMachineId = machineId.machineIdSync({original: true})
 
-app.get('/', function(req, res) {
-    res.send('Thanks for visiting this API. This page has no functionality. Why are you even here.');
-});
-
-app.get('/connect/:userId', function (req, res) {
-   //recorder.createRecord(req.userId, machineId, price);
-   res.send('You reached this page with id: ' + req.params.userId)
-})
+require('./routes/routes.js')(app)
 
 app.listen(3000, () => console.log('This app runs on port 3000.'))
