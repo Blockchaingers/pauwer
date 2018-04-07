@@ -5,11 +5,10 @@ module.exports = function(app) {
   })
 
   app.get('/api/:machineId/:userId/start', function (req, res) {
-     //recorder.createRecord(req.userId, machineId, price);
-     res.send('You started the power consumption')
+     res.json('{"message": "You started the power consumption"}');
   })
 
   app.get('/api/:machineId/:userId/stop', function (req, res) {
-     res.send('You stopped the power consumption')
+     res.json('{"message": "You stopped the power consumption"}');
   })
 }
