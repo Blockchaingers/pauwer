@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>Socket</h1>
     <p class="md-caption">ID {{ sid }}</p>
-    <p>Start using this socket.</p>
-    <md-button class="md-raised md-primary" v-on:click="start">Start</md-button>
-    <md-button class="md-raised md-accent">Stop</md-button>
+    <p>{{ socketActive ? 'Stop' : 'Start' }} using this socket.</p>
+    <md-button class="md-raised" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
+    <p>{{ responseMsg }}</p>
   </div>
 </template>
 
@@ -12,20 +12,23 @@
 export default {
   name: 'Socket',
   methods: {
-    start: function (e) {
-      fetch('//localhost:3000/api/' + this.sid + '/1234/start')
+    toggleSocket: function (e) {
+      var vm = this
+      var action = this.socketActive ? 'stop' : 'start'
+      fetch('//localhost:3000/api/' + this.sid + '/1234/' + action )
         .then(function (response) {
           return response.json()
         })
         .then(function (json) {
-          alert(JSON.parse(json).message)
+          vm.responseMsg = JSON.parse(json).message
+          vm.socketActive = !vm.socketActive
         })
     }
   },
   data () {
     return {
-      msg: 'Connect',
-      sid: this.$route.params.sid
+      sid: this.$route.params.sid,
+      socketActive: false
     }
   }
 }
