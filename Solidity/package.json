@@ -13,6 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "truffle-contract": "^3.0.4",
-    "web3": "^1.0.0-beta.33"
+    "web3": "0.2.8"
   }
 }

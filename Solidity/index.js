@@ -1,17 +1,26 @@
-var Web3 = require('web3')
-// Step 1: Get a contract into my application
-var json = require("./build/contracts/Recorder.json");
+let Web3 = require('web3')
+let provider = new Web3.providers.HttpProvider("http://localhost:7545")
+//let web3 = new Web3(provider)
 
-// Step 2: Turn that contract into an abstraction I can use
-var contract = require("truffle-contract");
-var MyContract = contract(json);
+let contract = require("truffle-contract");
+let json = require("./build/contracts/Recorder.json");
 
-// Step 3: Provision the contract with a web3 provider
-MyContract.setProvider(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+let MyContract = contract(json);
+MyContract.setProvider(provider);
 
-// Step 4: Use the contract!
+// console.log(web3.eth.accounts);
+// var recorder = await MyContract.deployed();
+// recorder.createRecord(1,2,500);
+// MyContract.at(MyContract.address).then((v)=>{
+//   return v.createRecord(1,2,500);
+// })
+
+// MyContract.currentProvider.sendAsync = function () {
+//   return MyContract.currentProvider.send.apply(MyContract.currentProvider, arguments);
+// };
+console.log(MyContract.web3.eth.accounts[0])
 MyContract.deployed().then(function(deployed) {
-return deployed.createRecord(1,2,500);
+  deployed.createRecord(1,2,500,{from: MyContract.web3.eth.accounts[0]})
 }).catch(function(err){
   console.log(err)
 });
