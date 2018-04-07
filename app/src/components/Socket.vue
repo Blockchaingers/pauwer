@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <p>Socket ID {{ sid }}</p>
     <button v-on:click="start">Start</button>
+    <p v-html=""></p>
   </div>
 </template>
 
@@ -13,7 +14,10 @@ export default {
     start: function (e) {
       fetch('//localhost:3000/api/' + this.sid + '/1234/start')
         .then(function (response) {
-          console.log(response)
+          return response.json()
+        })
+        .then(function (json) {
+          alert(JSON.parse(json).message)
         })
     }
   },
