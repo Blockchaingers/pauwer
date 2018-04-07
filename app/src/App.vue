@@ -50,7 +50,10 @@
 
 <script>
 export default {
-  name: 'Pauwer'
+  name: 'Pauwer',
+  data: () => ({
+    menuVisible: false
+  })
 }
 </script>
 
