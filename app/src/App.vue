@@ -1,13 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <header>
+      <span class="app-name">Pauwer</span>
+      <nav class="app-nav">
+        <ul>
+          <li><router-link to="/">Dashboard</router-link></li>
+          <li><router-link to="profile">Profile</router-link></li>
+        </ul>
+      </nav>
+    </header>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Pauwer'
 }
 </script>
 
