@@ -4,26 +4,25 @@ pragma solidity ^0.4.18;
  * @author Life on Mars — https://lifeonmars.pt
  */
 contract Recorder{
-
-  //only the machine should put records
-  struct EnergyRecord {
-    uint256 userId;
-    uint256 machineId;
-    uint256 wattHour;
+  struct wew {
+    uint wattHours;
+    uint timestamp;
   }
 
-  EnergyRecord[] public records;
+  mapping(uint => mapping(uint => wew[])) records;
 
-  function createRecord(uint256 userId,uint256 machineId, uint256 wattHour) public {
-      EnergyRecord newRecord;
-      newRecord.userId = userId;
-      newRecord.machineId = machineId;
-      newRecord.wattHour = wattHour;
-      records.push(newRecord);
+  function createRecord(uint userId, uint machineId, uint wattHours) public {
+    records[userId][machineId].push(wew({wattHours: wattHours, timestamp: now}));
   }
 
-  function getRecord() public returns (EnergyRecord[]){
-    return records;
+  function getRecords(uint userId, uint machineId) public view returns(uint[], uint[]) {
+    wew[] storage s = records[userId][machineId];
+    uint[] memory wH = new uint[](s.length); 
+    uint[] memory timestamps = new uint[](s.length); 
+    for(uint i=0; i< s.length; i++){
+      wH[i] = s[i].wattHours;
+      timestamps[i] = s[i].timestamp;
+    }
+return (wH, timestamps);
   }
-
 }
