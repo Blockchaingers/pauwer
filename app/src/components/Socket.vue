@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="pauwer-app socket-page">
     <h1>Socket</h1>
     <p class="md-caption">ID {{ sid }}</p>
     <!-- <p>{{ socketActive ? 'Stop' : 'Start' }} using this socket.</p> -->
-    <md-button class="md-raised" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
+    <md-button class="md-raised md-elevation-6" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
     <p>{{ responseMsg }}</p>
   </div>
 </template>
@@ -23,6 +23,10 @@ export default {
           vm.responseMsg = JSON.parse(json).message + ' at socket ' + JSON.parse(json).socketId
           vm.socketActive = !vm.socketActive
         })
+        .catch(function (error) {
+          vm.responseMsg = 'This socket is not reachable'
+          console.log(error)
+        })
     }
   },
   data () {
@@ -37,8 +41,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.md-button{
+  width: 300px;
+  height: 50px;
+  font-size: 1.2em;
+}
 h1, h2 {
   font-weight: normal;
+  text-align: cernter;
 }
 ul {
   list-style-type: none;

@@ -16,13 +16,13 @@ module.exports = function(app) {
     });
 
     res.json(
-      '{"message": "You started the power consumption", "socketId": ' + req.params.socketId + '}'
+      '{"message": "You started the power consumption", "socketId": "' + req.params.socketId + '"}'
     );
   })
 
   app.get('/api/:socketId/:userId/stop', function (req, res) {
     res.json(
-      '{"message": "You stopped the power consumption", "socketId": ' + req.params.socketId + '}'
+      '{"message": "You stopped the power consumption", "socketId": "' + req.params.socketId + '"}'
     );
   })
 }
