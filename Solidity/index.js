@@ -19,8 +19,14 @@ MyContract.setProvider(provider);
 //   return MyContract.currentProvider.send.apply(MyContract.currentProvider, arguments);
 // };
 console.log(MyContract.web3.eth.accounts[0])
-MyContract.deployed().then(function(deployed) {
-  deployed.createRecord(1,2,500,{from: MyContract.web3.eth.accounts[0]})
+var deployed;
+MyContract.deployed().then(function(v) {
+  deployed = v;
+  return deployed.createRecord(1,2,500,{from: MyContract.web3.eth.accounts[0]})
 }).catch(function(err){
   console.log(err)
+}).then(v=>{
+  return deployed.getRecords(1,2,{from: MyContract.web3.eth.accounts[0]})
+}).then(v=>{
+  console.log(v)
 });
