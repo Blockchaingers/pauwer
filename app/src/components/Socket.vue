@@ -3,7 +3,6 @@
     <h1>{{ msg }}</h1>
     <p>Socket ID {{ sid }}</p>
     <button v-on:click="start">Start</button>
-    <p v-html=""></p>
   </div>
 </template>
 
