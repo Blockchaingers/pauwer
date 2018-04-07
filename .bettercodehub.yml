@@ -1,5 +1,5 @@
 exclude:
 - /app/build/.*
-- .eslintrc.js
+- \.eslintrc.js
 - /config/index.js
 - /src/router/index.js
