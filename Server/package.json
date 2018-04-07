@@ -1,0 +1,16 @@
+{
+  "name": "smartplug",
+  "version": "1.0.0",
+  "description": "Blockchaingers Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wim Vermost, Joris Hoogeboom, Thomas Van Oekelen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-machine-id": "^1.1.10",
+    "yarn": "^1.5.1"
+  }
+}
