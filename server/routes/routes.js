@@ -1,3 +1,11 @@
+const usage = 100
+const Web3 = require('web3')
+const contract = require("truffle-contract")
+
+let provider = new Web3.providers.HttpProvider("http://localhost:7545")
+let contracts = require("../../solidity/build/contracts/Recorder.json")
+let MyContract = contract(contracts)
+
 module.exports = function(app) {
 
   app.get('/', function(req, res) {

@@ -2,13 +2,6 @@ const express = require('express')
 const app = express()
 const router = express.Router();
 const machineId = require('node-machine-id')
-const usage = 100
-const Web3 = require('web3')
-const contract = require("truffle-contract")
-
-let provider = new Web3.providers.HttpProvider("http://localhost:7545")
-let contracts = require("../solidity/build/contracts/Recorder.json")
-let MyContract = contract(contracts)
 
 async function getMachineId() {
     let id = await machineId();
