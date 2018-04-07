@@ -1,0 +1,20 @@
+.pauwer-app{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+.pauwer-app h1{
+  margin-bottom: 64px;
+  font-size: 2.5em;
+}
+.pauwer-app .md-button{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.pauwer-app p{
+  text-align: center;
+}
+.color-green{
+  background: green;
+}
