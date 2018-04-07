@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Socket ID {{ sid }}</p>
-    <button v-on:click="start">Start</button>
+    <p class="md-caption">ID {{ sid }}</p>
+    <p>Start using this socket.</p>
+    <md-button class="md-raised md-primary" v-on:click="start">Start</md-button>
+    <md-button class="md-raised md-accent">Stop</md-button>
   </div>
 </template>
 
