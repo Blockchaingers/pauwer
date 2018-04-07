@@ -20,9 +20,12 @@ export default {
           return response.json()
         })
         .then(function (json) {
-          console.log(json)
           vm.responseMsg = JSON.parse(json).message + ' at socket ' + JSON.parse(json).socketId
           vm.socketActive = !vm.socketActive
+        })
+        .catch(function (error) {
+          vm.responseMsg = 'This socket is not reachable'
+          console.log(error)
         })
     }
   },
