@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>Socket</h1>
     <p class="md-caption">ID {{ sid }}</p>
-    <p>{{ socketActive ? 'Stop' : 'Start' }} using this socket.</p>
+    <!-- <p>{{ socketActive ? 'Stop' : 'Start' }} using this socket.</p> -->
     <md-button class="md-raised" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
     <p>{{ responseMsg }}</p>
   </div>
@@ -20,7 +20,7 @@ export default {
           return response.json()
         })
         .then(function (json) {
-          vm.responseMsg = JSON.parse(json).message
+          vm.responseMsg = JSON.parse(json).message + ' at socket ' + JSON.parse(json).socketId
           vm.socketActive = !vm.socketActive
         })
     }
