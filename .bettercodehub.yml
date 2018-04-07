@@ -1,2 +1,2 @@
 exclude:
-- /app/build/*
+- /app/build/.*
