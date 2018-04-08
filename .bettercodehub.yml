@@ -1,7 +1,6 @@
 exclude:
 - /app/build/.*
 - /app/\.eslintrc.js
-- /app/config/index.js
 - /app/src/router/index.js
 languages:
 - javascript
