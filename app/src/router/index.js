@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Dashboard from '@/components/Dashboard'
 import Socket from '@/components/Socket'
 import Profile from '@/components/Profile'
+import Contracts from '@/components/Contracts'
 
 Vue.use(Router)
 
@@ -23,6 +25,16 @@ export default new Router({
       path: '/profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/connections',
+      name: 'My connections',
+      component: Contracts
+    },
+    {
+      path: '/connections/:sid',
+      name: 'Connection',
+      component: Socket
     }
   ]
 })
