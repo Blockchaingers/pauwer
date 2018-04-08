@@ -15,11 +15,11 @@ module.exports = function(app) {
 
   app.get('/api/:socketId/:userId/getState', function(req, res) {
     MyContract.deployed().then(function(instance) {
-      console.log(instance)
       return instance.getRecords(req.params.userId, req.params.socketId).then(function(result) {
+        console.log(result)
         let lastState = result[0].map((col, i) => result.map(row => row[i]))
-        // console.log(lastState)
-        res.send(lastState[lastState.length-1])
+        console.log(lastState)
+        res.json(lastState[lastState.length-1])
       })
     }).catch(function(err){
         console.log(err)

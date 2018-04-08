@@ -41,9 +41,11 @@ export default {
       var action = this.socketActive ? 'stop' : 'start'
       fetch('//localhost:3000/api/' + this.sid + '/1234/' + action)
         .then(function (response) {
+          console.log(response)
           return response.json()
         })
         .then(function (json) {
+          fetch('http://sonoff/cm?cmnd=Power%20TOGGLE')
           vm.getSocketState()
           vm.responseMsg = JSON.parse(json).message + vm.eventTime
         })
