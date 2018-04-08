@@ -22,11 +22,11 @@ console.log(MyContract.web3.eth.accounts[0])
 var deployed;
 MyContract.deployed().then(function(v) {
   deployed = v;
-  return deployed.createRecord(1,2,500,{from: MyContract.web3.eth.accounts[0]})
+  return deployed.createRecord(1,8,500,{from: MyContract.web3.eth.accounts[0]})
 }).catch(function(err){
   console.log(err)
 }).then(v=>{
-  return deployed.getRecords(1,2,{from: MyContract.web3.eth.accounts[0]})
+  return deployed.getRecords(1,2)
 }).then(v=>{
-  console.log(v)
+  console.log(v[1])
 });
