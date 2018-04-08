@@ -50,7 +50,7 @@ export default {
   methods: {
     getSocketState: function (sid) {
       var vm = this
-      fetch('//172.20.10.2:3000/api/' + sid + '/1234/getState')
+      fetch('//localhost:3000/api/' + sid + '/1234/getState')
         .then(function (response) {
           return response.json()
         })

@@ -23,7 +23,7 @@ export default {
   methods: {
     getSocketState: function () {
       var vm = this
-      fetch('//172.20.10.2:3000/api/' + this.sid + '/1234/getState')
+      fetch('//localhost:3000/api/' + this.sid + '/1234/getState')
         .then(function (response) {
           return response.json()
         })
@@ -38,7 +38,7 @@ export default {
     toggleSocket: function (e) {
       var vm = this
       var action = this.socketActive ? 'stop' : 'start'
-      fetch('//172.20.10.2:3000/api/' + this.sid + '/1234/' + action)
+      fetch('//localhost:3000/api/' + this.sid + '/1234/' + action)
         .then(function (response) {
           return response.json()
         })

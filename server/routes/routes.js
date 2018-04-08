@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 const contract = require("truffle-contract")
 
-let provider = new Web3.providers.HttpProvider("http://172.20.10.2:7545")
+let provider = new Web3.providers.HttpProvider("http://localhost:7545")
 let contracts = require("../../solidity/build/contracts/Recorder.json")
 let MyContract = contract(contracts)
 
