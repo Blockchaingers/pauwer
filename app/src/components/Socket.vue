@@ -1,26 +1,50 @@
 <template>
-  <div class="">
-    <h1>Socket {{ sid }}</h1>
-    <p class="md-caption">{{ sid }}</p>
-    <!-- <p>{{ socketActive ? 'Stop' : 'Start' }} using this socket.</p> -->
-    <md-button class="md-raised md-elevation-6" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
+  <div>
+    <h1>Socket <span class="md-caption">{{ sid }}</span></h1>
+    <p>{{ activityMsg }}</p>
+    <md-button class="md-raised" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
     <p>{{ responseMsg }}</p>
+    <p class="md-body-2" v-if="consumption > 0">Consumed {{ consumption }} Wh at €0.31/kWh for a total of €{{ Math.round(consumption * 0.31) * 0.001 }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      sid: this.$route.params.sid,
+      socketActive: null,
+      activityMsg: null,
+      responseMsg: null,
+      eventTime: null,
+      consumption: null
+    }
+  },
   methods: {
+    getSocketState: function () {
+      var vm = this
+      fetch('//172.20.10.2:3000/api/' + this.sid + '/1234/getState')
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (result) {
+          vm.socketActive = result[2]
+          vm.activityMsg = 'You are ' + (result[2] ? '' : 'not') + ' currently using this socket.'
+          vm.eventTime = result[2] ? new Date(result[1] * 1000) : ''
+          vm.consumption = result[0]
+          return result
+        })
+    },
     toggleSocket: function (e) {
       var vm = this
       var action = this.socketActive ? 'stop' : 'start'
-      fetch('//localhost:3000/api/' + this.sid + '/1234/' + action)
+      fetch('//172.20.10.2:3000/api/' + this.sid + '/1234/' + action)
         .then(function (response) {
           return response.json()
         })
         .then(function (json) {
-          vm.responseMsg = JSON.parse(json).message + ' at socket ' + JSON.parse(json).socketId
-          vm.socketActive = !vm.socketActive
+          vm.getSocketState()
+          vm.responseMsg = JSON.parse(json).message + vm.eventTime
         })
         .catch(function (error) {
           vm.responseMsg = 'This socket is not reachable'
@@ -28,12 +52,8 @@ export default {
         })
     }
   },
-  data () {
-    return {
-      sid: this.$route.params.sid,
-      socketActive: false,
-      responseMsg: null
-    }
+  created () {
+    this.getSocketState()
   }
 }
 </script>

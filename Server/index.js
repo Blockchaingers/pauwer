@@ -11,4 +11,4 @@ const uniqueMachineId = machineId.machineIdSync({original: true})
 
 require('./routes/routes.js')(app)
 
-app.listen(3000, () => console.log('This app runs on port 3000.'))
+app.listen(3000, '172.20.10.2', () => console.log('This app runs on port 3000.'))
