@@ -1,8 +1,8 @@
 exclude:
 - /app/build/.*
 - /app/\.eslintrc.js
-- /config/index.js
-- /src/router/index.js
+- /app/config/index.js
+- /app/src/router/index.js
 languages:
 - javascript
 - solidity
