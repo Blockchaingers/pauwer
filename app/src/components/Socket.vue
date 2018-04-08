@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Socket <span class="md-caption">{{ sid }}</span></h1>
+    <h1 v-if="sid == '275328964'">Home lights <span class="md-caption">{{ sid }}</span></h1>
+    <h1 v-else>Socket <span class="md-caption">{{ sid }}</span></h1>
     <p>{{ activityMsg }}</p>
     <md-button class="md-raised" v-bind:class="{ 'md-primary': !socketActive, 'md-accent': socketActive }" v-on:click="toggleSocket">{{ socketActive ? 'Stop' : 'Start' }}</md-button>
     <p>{{ responseMsg }}</p>

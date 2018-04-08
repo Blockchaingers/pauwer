@@ -54,7 +54,6 @@
           </md-speed-dial-content>
         </md-speed-dial>
       </md-app-content>
-
     </md-app>
   </div>
 </template>

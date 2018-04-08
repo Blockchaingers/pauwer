@@ -1,5 +1,12 @@
 <template>
   <md-list>
+    <md-list-item v-for="socket in sockets" v-bind:class="{ 'md-inset' : socket.state }" :to="{ name: 'Connection', params: { 'sid' : socket.id }}">
+      <md-icon class="md-primary" v-if="socket.state">flash_on</md-icon>
+      <div class="md-list-item-text">
+        <span>{{ socket.alias }}</span>
+        <span class="md-caption">{{ socket.id }}</span>
+      </div>
+    </md-list-item>
 
     <md-list-item v-bind:class="{ 'md-inset' : !socketActive }" to="/connections/275328964">
       <md-icon class="md-primary" v-if="socketActive">flash_on</md-icon>
@@ -44,7 +51,33 @@
 export default {
   data () {
     return {
-      socketActive: null
+      sockets: [
+        {
+          alias: 'Home lights',
+          id: '275328964',
+          state: false
+        },
+        {
+          alias: 'eCar charging pole',
+          id: '1216563',
+          state: null
+        },
+        {
+          alias: null,
+          id: 'a2yu39a',
+          state: null
+        },
+        {
+          alias: 'Camper',
+          id: '3894a740a0',
+          state: null
+        },
+        {
+          alias: 'AirBnB',
+          id: '33789fyh73b',
+          state: null
+        }
+      ]
     }
   },
   methods: {
