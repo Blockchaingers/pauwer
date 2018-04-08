@@ -12,11 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "truffle-contract": "^3.0.4"
-=======
     "truffle-contract": "^3.0.4",
     "web3": "0.2.8"
->>>>>>> web3
   }
 }
